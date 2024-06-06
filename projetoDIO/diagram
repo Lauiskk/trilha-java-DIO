@@ -1,0 +1,34 @@
+classDiagram
+    class iPhone {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica)
+        +ligar(numero)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(musica)
+    }
+
+    class AparelhoTelefonico {
+        +ligar(numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    iPhone --|> ReprodutorMusical : implements
+    iPhone --|> AparelhoTelefonico : implements
+    iPhone --|> NavegadorInternet : implements
